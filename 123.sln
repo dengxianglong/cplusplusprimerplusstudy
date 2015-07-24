@@ -225,6 +225,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "hello word", "hello word\he
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Hello Word1", "Hello Word1\Hello Word1.vcxproj", "{9D57F85D-C44A-476E-A13F-EAB557290E09}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "13.11", "13.11\13.11.vcxproj", "{2E752C27-F35C-4D16-87AD-4330EFBC8B47}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "13.14", "13.14\13.14.vcxproj", "{2F8612FB-B81F-4CBD-93D5-18235081FCB2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -1129,6 +1133,22 @@ Global
 		{9D57F85D-C44A-476E-A13F-EAB557290E09}.UnicodeDebug|Win32.Build.0 = Debug|Win32
 		{9D57F85D-C44A-476E-A13F-EAB557290E09}.UnicodeRelease|Win32.ActiveCfg = Release|Win32
 		{9D57F85D-C44A-476E-A13F-EAB557290E09}.UnicodeRelease|Win32.Build.0 = Release|Win32
+		{2E752C27-F35C-4D16-87AD-4330EFBC8B47}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2E752C27-F35C-4D16-87AD-4330EFBC8B47}.Debug|Win32.Build.0 = Debug|Win32
+		{2E752C27-F35C-4D16-87AD-4330EFBC8B47}.Release|Win32.ActiveCfg = Release|Win32
+		{2E752C27-F35C-4D16-87AD-4330EFBC8B47}.Release|Win32.Build.0 = Release|Win32
+		{2E752C27-F35C-4D16-87AD-4330EFBC8B47}.UnicodeDebug|Win32.ActiveCfg = Debug|Win32
+		{2E752C27-F35C-4D16-87AD-4330EFBC8B47}.UnicodeDebug|Win32.Build.0 = Debug|Win32
+		{2E752C27-F35C-4D16-87AD-4330EFBC8B47}.UnicodeRelease|Win32.ActiveCfg = Release|Win32
+		{2E752C27-F35C-4D16-87AD-4330EFBC8B47}.UnicodeRelease|Win32.Build.0 = Release|Win32
+		{2F8612FB-B81F-4CBD-93D5-18235081FCB2}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2F8612FB-B81F-4CBD-93D5-18235081FCB2}.Debug|Win32.Build.0 = Debug|Win32
+		{2F8612FB-B81F-4CBD-93D5-18235081FCB2}.Release|Win32.ActiveCfg = Release|Win32
+		{2F8612FB-B81F-4CBD-93D5-18235081FCB2}.Release|Win32.Build.0 = Release|Win32
+		{2F8612FB-B81F-4CBD-93D5-18235081FCB2}.UnicodeDebug|Win32.ActiveCfg = Debug|Win32
+		{2F8612FB-B81F-4CBD-93D5-18235081FCB2}.UnicodeDebug|Win32.Build.0 = Debug|Win32
+		{2F8612FB-B81F-4CBD-93D5-18235081FCB2}.UnicodeRelease|Win32.ActiveCfg = Release|Win32
+		{2F8612FB-B81F-4CBD-93D5-18235081FCB2}.UnicodeRelease|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
