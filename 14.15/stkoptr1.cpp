@@ -37,6 +37,9 @@ int main()
 	for ( int i = 0; i < Num; i++)
 		std::cout << out[i] << std::endl;
 
+//	for ( int i = 0; i < Num; i++)
+//		std::cout << nextin[i] << std::endl;
+
 	std::cout << "Byte.\n";
 	return 0;
 }

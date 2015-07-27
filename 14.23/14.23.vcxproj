@@ -11,10 +11,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{E091F736-36A7-444B-AD3D-7869FC870391}</ProjectGuid>
+    <ProjectGuid>{52C1DA6A-D0E9-454D-A0F4-2AFC0566D942}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>My1415</RootNamespace>
-    <ProjectName>14.150</ProjectName>
+    <RootNamespace>My1423</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -75,10 +74,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="stcktp1.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="stkoptr1.cpp" />
+    <ClCompile Include="tmp21tmp.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
