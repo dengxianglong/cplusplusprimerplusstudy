@@ -11,9 +11,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{E6817134-1511-43BD-BE78-659A3B74E801}</ProjectGuid>
+    <ProjectGuid>{A40660C7-8ABB-46E2-9515-50368533377E}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>My1501</RootNamespace>
+    <RootNamespace>My1512</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -74,12 +74,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="tv.h" />
-    <ClInclude Include="tvfm.h" />
+    <ClInclude Include="exc_mean.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="tv.cpp" />
-    <ClCompile Include="use_tv.cpp" />
+    <ClCompile Include="error5.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

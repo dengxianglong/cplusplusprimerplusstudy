@@ -10,10 +10,16 @@
       <Platform>Win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="queuetp.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="nested.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{E6817134-1511-43BD-BE78-659A3B74E801}</ProjectGuid>
+    <ProjectGuid>{F2430635-1DCA-44E6-A871-37E31B97574E}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>My1501</RootNamespace>
+    <RootNamespace>My1504</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -73,14 +79,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="tv.h" />
-    <ClInclude Include="tvfm.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="tv.cpp" />
-    <ClCompile Include="use_tv.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

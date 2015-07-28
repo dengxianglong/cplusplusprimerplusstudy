@@ -15,19 +15,14 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="tv.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="tvfm.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="tv.cpp">
+    <ClCompile Include="error1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="error2.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
-    <ClCompile Include="use_tv.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="error3.cpp">
+      <Filter>Resource Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

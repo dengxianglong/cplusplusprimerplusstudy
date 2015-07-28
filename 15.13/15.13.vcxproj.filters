@@ -15,18 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="tv.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="tvfm.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="tv.cpp">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
-    <ClCompile Include="use_tv.cpp">
+    <ClCompile Include="newexcp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
