@@ -355,6 +355,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "18.02", "18.02\18.02.vcxpro
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "18.01", "18.01\18.01.vcxproj", "{BD84FF38-73E5-483E-904B-FC76E6EAFBFC}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "19.02", "19.02\19.02.vcxproj", "{AC86FD50-6E02-49EE-87D6-C4CEB5E47A75}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -1779,6 +1781,14 @@ Global
 		{BD84FF38-73E5-483E-904B-FC76E6EAFBFC}.UnicodeDebug|Win32.Build.0 = Debug|Win32
 		{BD84FF38-73E5-483E-904B-FC76E6EAFBFC}.UnicodeRelease|Win32.ActiveCfg = Release|Win32
 		{BD84FF38-73E5-483E-904B-FC76E6EAFBFC}.UnicodeRelease|Win32.Build.0 = Release|Win32
+		{AC86FD50-6E02-49EE-87D6-C4CEB5E47A75}.Debug|Win32.ActiveCfg = Debug|Win32
+		{AC86FD50-6E02-49EE-87D6-C4CEB5E47A75}.Debug|Win32.Build.0 = Debug|Win32
+		{AC86FD50-6E02-49EE-87D6-C4CEB5E47A75}.Release|Win32.ActiveCfg = Release|Win32
+		{AC86FD50-6E02-49EE-87D6-C4CEB5E47A75}.Release|Win32.Build.0 = Release|Win32
+		{AC86FD50-6E02-49EE-87D6-C4CEB5E47A75}.UnicodeDebug|Win32.ActiveCfg = Debug|Win32
+		{AC86FD50-6E02-49EE-87D6-C4CEB5E47A75}.UnicodeDebug|Win32.Build.0 = Debug|Win32
+		{AC86FD50-6E02-49EE-87D6-C4CEB5E47A75}.UnicodeRelease|Win32.ActiveCfg = Release|Win32
+		{AC86FD50-6E02-49EE-87D6-C4CEB5E47A75}.UnicodeRelease|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
