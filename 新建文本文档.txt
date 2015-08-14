@@ -1,0 +1,111 @@
+  duilib消息处理机制
+  1 创建 - 通过CreateEx最后一个参数传递类指针this, 在消息处理函数中对WM_NCCREATE消息进行处理, 通过SetWindowLongPtr(GWLP_USERDATA)进行保存
+  2 消息处理 - 在消息处理函数通过GetWindowLongPtr(GWLP_USERDATA)得到其类指针, 调用虚函数HandleMessage()相应其他消息。
+  3 销毁 - 消息处理函数中对WM_NCDESTROY消息进行处理, 调用原消息处理函数, 重置(GWLP_USERDATA), 调用虚函数OnFinalMessage()做最后处理。
+
+
+ DrawLine() - 绘制直线 
+  DrawRect() - 绘制矩形
+ DrawRoundRect() - 绘制圆角矩形
+ DrawText() - 绘制文字
+  pManager - 绘制管理者
+  pControl - 控件句柄
+
+  GetPaintDC() - 设备句柄相关函数
+  GetPaintWindow() - 得到窗口句柄
+  GetTooltipWindow() - 得到提示窗口句柄
+  GetMousePos() - 得到鼠标位置
+  GetClientSize() - 得到客户端区域大小
+  获取/设置 窗口初始化时大小
+   GetInitSize()
+    SetInitSize()
+  获取/设置 当前工作目录
+   GetCurrentPath()
+    SetCurrentPath()
+   获取/设置 资源动态库句柄
+  GetResourceDll()
+   SetResourceDll()
+  获取/设置 资源路径
+  GetResourcePath()
+   SetResourcePath()
+  获取/设置 资源压缩包文件名
+  GetResourceZip()
+   SetResourceZip()
+
+消息循环
+  static void MessageLoop();
+  消息处理
+  static bool TranslateMessage(const LPMSG pMsg);
+  消息处理
+  bool MessageHandler(UINT uMsg, WPARAM wParam, LPARAM lParam, LRESULT& lRes);
+  消息预处理
+  bool PreMessageHandler(UINT uMsg, WPARAM wParam, LPARAM lParam, LRESULT& lRes);
+
+ 回调函数 - 比较属性(pData)与控件(pThis)的属性是否相同
+  static CControlUI* CALLBACK __FindControlFromNameHash(CControlUI* pThis, LPVOID pData); - 按名称查找控件的回调函数
+  static CControlUI* CALLBACK __FindControlFromCount(CControlUI* pThis, LPVOID pData); - 计算控件数目的回调函数
+  static CControlUI* CALLBACK __FindControlFromPoint(CControlUI* pThis, LPVOID pData); - 按位置查找控件的回调函数
+  static CControlUI* CALLBACK __FindControlFromTab(CControlUI* pThis, LPVOID pData); - 查找下一个相应tab的控件
+  static CControlUI* CALLBACK __FindControlFromShortcut(CControlUI* pThis, LPVOID pData); - 快捷方式对应的控件
+  static CControlUI* CALLBACK __FindControlFromUpdate(CControlUI* pThis, LPVOID pData); - 查找需要刷新的控件
+  static CControlUI* CALLBACK __FindControlFromNameByParent(CControlUI* pThis, LPVOID pData); - 查找子控件
+  CStdPtrArray m_aPreMessageFilters;  //预处理消息列表
+  CStdPtrArray m_aMessageFilters;     //消息处理列表
+
+  GetName() - 得到控件名称 名称为控件的唯一ID
+   SetName() - 设置控件名称
+  GetInterface() - 得到控件指针
+  GetClass() - 得到控件类名
+  GetControlFlags() - 得到控件类型标志
+  Activate() - 控件是否活跃 (非不可用状态，非不可见状态)
+   GetManager() - 得到绘制管理者
+  SetMananer()
+    功能 - 设置控件的绘制管理者
+   实现 -
+    设置控件管理者
+    初始化
+  GetParent() - 得到父控件
+  GetText() - 得到控件显示内容
+  SetText() - 设置控件显示内容
+  GetBkColor() - 得到背景色
+
+   实现 - 绘制循序：背景颜色->背景图->状态图->文本->边框
+    PaintBkColor()
+       功能 - 绘制背景色
+    PaintBkImage()
+       功能 - 绘制背景图片
+    PaintStatusImage()
+       功能 - 根据状态绘制背景图片
+    PaintText() - 绘制文字
+    PaintBorder() - 绘制边框
+
+
+4.消息处理机制
+
+ 第一步：注册消息处理函数
+
+在CWindowWnd注册窗口（RegisterWindowClass（））里，注册消息回调函数（__WndProc）；
+
+第二步：消息分发
+
+        消息回调函数（处理所有系统发送的消息），然后回调函数通过子类的CMainFrameWnd::HandleMessage对消息进行分发。
+
+       非窗口消息通过CMainFrameWnd::HandleMessage调用CPaintManagerUI::MessageHandler进行分发。
+
+第三步：消息循环
+
+      在CPaintManagerUI类的MessageLoop处理消息循环； 
+
+      接收到消息以后，进入消息回调函数（__WndProc）；
+
+
+voidCPaintManagerUI::Init(HWNDhWnd)
+ {
+     ASSERT(::IsWindow(hWnd));
+     // Remember the window context we came from
+     m_hWndPaint =  hWnd;
+     m_hDcPaint = ::GetDC(hWnd);
+     // We'll want to filter messages globally too
+     m_aPreMessages.Add(this);
+ }
+
